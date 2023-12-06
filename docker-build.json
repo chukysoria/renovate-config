@@ -1,5 +1,6 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Upgrade container image on Dockerfile and build.yaml files.",
     "regexManagers": [
       {
         "fileMatch": ["(^|/)Dockerfile$", "(^|/)build.yaml$"],

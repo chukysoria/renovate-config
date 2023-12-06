@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default configuration for Chukyserver.",
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboard": true,
   "labels": ["dependencies", "no-stale"],
@@ -9,7 +10,7 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["patch"],
-      "automerge": true      
+      "automerge": true    
     }
   ]
 }
