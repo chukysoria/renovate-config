@@ -1,0 +1,17 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Search packages in repology installed in containers for distribution <code>{{arg0}}</code>",
+    "regexManagers": [
+      {
+        "fileMatch": ["(^|/)Dockerfile$"],
+        "matchStringsStrategy": "any",
+        "matchStrings": [
+            "\\s\\s(?<package>[a-z0-9-]+)=(?<currentValue>[a-z0-9-_+~.]+)\\s+",
+            "\\s(?<package>[a-z0-9][a-z0-9-_]+)=(?<currentValue>[a-z0-9-_.]+)(\\s+|,)"
+        ],
+        "versioningTemplate": "loose",
+        "datasourceTemplate": "repology",
+        "depNameTemplate": "{{arg0}}/{{package}}"
+      }
+    ]
+}
