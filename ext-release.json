@@ -1,0 +1,16 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Retrieves version for <code>{{arg1}}</code> using datasource <code>{{arg0}}</code>.",
+    "customManagers": [
+      {
+        "fileMatch": ["(^|/)Dockerfile$", "(^|/)config.yaml$"],
+        "matchStrings": [
+          "ARG BUILD_EXT_RELEASE=[\"']?(?<currentValue>.+?)[\"']?\\s+",
+          "ext_release: (?<currentValue>.+)\\s+"
+        ],
+        "datasourceTemplate": "{{arg0}}",
+        "depNameTemplate": "{{arg1}}"
+      }
+    ]
+  }
+  
