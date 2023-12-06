@@ -1,16 +1,26 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Default configuration for Chukyserver.",
+  "extends": [
+    "config:recommended"
+  ],
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboard": true,
-  "labels": ["dependencies", "no-stale"],
+  "labels": [
+    "dependencies",
+    "no-stale"
+  ],
   "commitMessagePrefix": "⬆️",
   "commitMessageTopic": "{{depName}}",
-  "assignees": ["chukysoria"],
+  "assignees": [
+    "chukysoria"
+  ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["patch"],
-      "automerge": true    
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true
     }
   ]
 }
