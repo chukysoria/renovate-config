@@ -1,0 +1,14 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "regexManagers": [
+      {
+        "fileMatch": ["(^|/)Dockerfile$", "(^|/)build.yaml$"],
+        "matchStringsStrategy": "any",
+        "matchStrings": [
+          "ARG BUILD_FROM=(?<depName>.*?):(?<currentValue>.*?)\\s+",
+          "(aarch64|armv7|x86_64):\\s[\"']?(?<depName>.*?):(?<currentValue>.*?)[\"']?\\s"
+        ],
+        "datasourceTemplate": "docker"
+      }
+    ]
+}
