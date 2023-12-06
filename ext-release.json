@@ -8,6 +8,7 @@
           "ARG BUILD_EXT_RELEASE=[\"']?(?<currentValue>.+?)[\"']?\\s+",
           "ext_release: (?<currentValue>.+)\\s+"
         ],
+        "versioningTemplate": "loose",
         "datasourceTemplate": "{{arg0}}",
         "depNameTemplate": "{{arg1}}"
       }
