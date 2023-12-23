@@ -1,0 +1,15 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Docker versioning adjusted to LinuxServer.io images.",
+    "packageRules": [
+        {
+          "matchDatasources": [
+            "docker"
+          ],
+          "matchPackagePrefixes": [
+            "lscr.io/linuxserver"
+          ],
+          "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:\\.|-r|-ls)(?<build>\\d+)(?:-ls(?<revision>\\d+))?$"
+        }
+      ]
+  }

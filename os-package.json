@@ -1,7 +1,7 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "description": "Search packages in repology installed in containers for distribution <code>{{arg0}}</code>",
-    "regexManagers": [
+    "customManagers": [
       {
         "fileMatch": ["(^|/)Dockerfile$"],
         "matchStringsStrategy": "any",
