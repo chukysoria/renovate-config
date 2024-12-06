@@ -6,8 +6,8 @@
           "matchDatasources": [
             "docker"
           ],
-          "matchPackagePrefixes": [
-            "lscr.io/linuxserver"
+          "matchPackageNames": [
+            "lscr.io/linuxserver/**"
           ],
           "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:\\.|-r|-ls)(?<build>\\d+)(?:-ls(?<revision>\\d+))?$"
         }
