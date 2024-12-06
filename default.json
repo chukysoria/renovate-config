@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Default configuration for Chukyserver.",
   "extends": [
-    "config:recommended"
+    "config:best-practices"
   ],
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboard": true,

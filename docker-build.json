@@ -3,6 +3,7 @@
   "description": "Upgrade container image on Dockerfile and build.yaml files.",
   "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": [
         "(^|/)Dockerfile$",
         "(^|/)build.yaml$"
