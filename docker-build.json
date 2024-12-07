@@ -20,9 +20,8 @@
       ],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        ":\\s[\"']?(?<depName>[^:]+?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?\\s"
+        "(?aarch64|x86_64|armv7):\\s(?<depName>[^:]+?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\\s+"
       ],
-      "autoReplaceStringTemplate":  "TESTCARLOS: {{{depName}}}:{{{newValue}}}@{{{newDigest}}}",
       "datasourceTemplate": "docker"
     }
   ]
