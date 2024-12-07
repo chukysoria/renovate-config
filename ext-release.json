@@ -21,7 +21,7 @@
           "(^|/)config.yaml$"
         ],
         "matchStrings": [
-          "ext_release: [\"']?(?<currentValue>.+?)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']\\s+"
+          "ext_release: [\"']?(?<currentValue>.+?)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?\\s+"
         ],
         "autoReplaceStringTemplate": "ext_release: \"{{#if newValue}}{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}\"\n",
         "versioningTemplate": "loose",
