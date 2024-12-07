@@ -10,8 +10,8 @@
       ],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "ARG BUILD_FROM=(?<depName>.*?):(?<currentValue>.*?)(@(?<currentDigest>.*?))?\\s+",
-        "(aarch64|armv7|x86_64):\\s[\"']?(?<depName>.*?):(?<currentValue>.*?)(@(?<currentDigest>.*?))?[\"']?\\s"
+        "ARG BUILD_FROM=(?<depName>.*?):(?<currentValue>[^@]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\\s+",
+        "(aarch64|armv7|x86_64):\\s[\"']?(?<depName>.*?):(?<currentValue>[^@]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?\\s"
       ],
       "datasourceTemplate": "docker"
     }
