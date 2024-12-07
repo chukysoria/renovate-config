@@ -9,7 +9,7 @@
       ],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "ARG BUILD_FROM=(?<depName>[^:]+?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\\s+"
+        "ARG BUILD_FROM=(?<depName>[^:]+?):(?<currentValue>[^@\\s]+?)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\\s+"
       ],
       "autoReplaceStringTemplate": "ARG BUILD_FROM={{depName}}{{#if newValue}}:{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}\n",
       "datasourceTemplate": "docker"
@@ -21,7 +21,7 @@
       ],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        ":\\s(?<depName>[^:]+?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\\s"
+        ":\\s(?<depName>[^:]+?):(?<currentValue>[^@\\s]+?)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\\s"
       ],
       "autoReplaceStringTemplate": ": {{depName}}{{#if newValue}}:{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}\n",
       "datasourceTemplate": "docker"
