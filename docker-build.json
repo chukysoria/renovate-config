@@ -5,14 +5,24 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "(^|/)Dockerfile$",
-        "(^|/)build.yaml$"
+        "(^|/)Dockerfile$"
       ],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "ARG BUILD_FROM=(?<depName>.*?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\\s+",
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "(^|/)build.yaml$"
+      ],
+      "matchStringsStrategy": "recursive",
+      "matchStrings": [
         "(?:aarch64|armv7|x86_64):\\s[\"']?(?<depName>[^:]+?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?\\s"
       ],
+      "autoReplaceStringTemplate":  "{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
       "datasourceTemplate": "docker"
     }
   ]
