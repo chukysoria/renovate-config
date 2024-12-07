@@ -18,11 +18,11 @@
       "fileMatch": [
         "(^|/)build.yaml$"
       ],
-      "matchStringsStrategy": "recursive",
+      "matchStringsStrategy": "any",
       "matchStrings": [
-        "(?:aarch64|armv7|x86_64):\\s[\"']?(?<depName>[^:]+?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?\\s"
+        ":\\s[\"']?(?<depName>[^:]+?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?\\s"
       ],
-      "autoReplaceStringTemplate":  "{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
+      "autoReplaceStringTemplate":  ": {{{depName}}}:{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
       "datasourceTemplate": "docker"
     }
   ]
