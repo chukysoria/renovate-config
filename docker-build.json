@@ -22,7 +22,7 @@
       "matchStrings": [
         ":\\s[\"']?(?<depName>[^:]+?):(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?\\s"
       ],
-      "autoReplaceStringTemplate":  "TESTCARLOS: {{{depName}}}:{{{newValue}}}@{{{newDigest}}}}",
+      "autoReplaceStringTemplate":  "TESTCARLOS: {{{depName}}}:{{{newValue}}}@{{{newDigest}}}",
       "datasourceTemplate": "docker"
     }
   ]
