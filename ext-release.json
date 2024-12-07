@@ -10,7 +10,7 @@
         "matchStrings": [
           "ARG BUILD_EXT_RELEASE=[\"']?(?<currentValue>.+?)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?\\s+"
         ],
-        "autoReplaceStringTemplate": "ARG BUILD_EXT_RELEASE=\"{{#if newValue}}:{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}\"\n",
+        "autoReplaceStringTemplate": "ARG BUILD_EXT_RELEASE=\"{{#if newValue}}{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}\"\n",
         "versioningTemplate": "loose",
         "datasourceTemplate": "{{arg0}}",
         "depNameTemplate": "{{arg1}}"
@@ -23,7 +23,7 @@
         "matchStrings": [
           "ext_release: [\"']?(?<currentValue>.+?)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']\\s+"
         ],
-        "autoReplaceStringTemplate": "ext_release: \"{{#if newValue}}:{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}\"\n",
+        "autoReplaceStringTemplate": "ext_release: \"{{#if newValue}}{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}\"\n",
         "versioningTemplate": "loose",
         "datasourceTemplate": "{{arg0}}",
         "depNameTemplate": "{{arg1}}"
